@@ -658,6 +658,20 @@ header.active #bar{
     }
 }
 
+.swiper-slide {
+    text-align: center;
+}
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
 .big-furn{
     width: 90%;
     margin: 100px auto;
@@ -674,7 +688,8 @@ header.active #bar{
     position: relative;
 }
 .big-part img{
-    width: 75%;
+    max-width: 100%;
+    height: auto;
 }
 .big-part .text-inside{
     position: absolute;
@@ -733,12 +748,34 @@ header.active #bar{
 /* media  */
 
 @media(max-width: 991px){
+    .swiper-wrapper {
+        height: auto;
+    }
     .big-part img{
         width: 100%;
     }
+    .swiper-slide img{
+        width: 100%;
+    }
+    .image-text {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 5px;
+        font-size: 15px;
+        border-radius: 5px;
+    }
 }
-
+.swiper-wrapper {
+    height: auto;
+}
 @media(max-width: 576px){
+    .swiper-wrapper {
+        height: auto;
+    }
     .text-inside{
         display: none;
     }
@@ -747,6 +784,23 @@ header.active #bar{
     }
     .big-furn .furn-title p{
         font-size: 13px;
+    }
+    .big-part img{
+        width: 100%;
+    }
+    .swiper-slide img{
+        width: 100%;
+    }
+    .image-text {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding:5px;
+        font-size: 15px;
+        border-radius: 5px;
     }
 }
 
@@ -1076,12 +1130,18 @@ header.active #bar{
 /* media query  */
 
 @media(max-width: 768px){
+    .bg-footer .footer-flex{
+        flex-wrap: wrap;
+    }
     .bg-footer .footer-flex .footer1{
         width: 49%;
     }
 }
 
 @media(max-width: 576px){
+    .bg-footer .footer-flex{
+        flex-wrap: wrap;
+    }
     .bg-footer .footer-flex .footer1{
         width: 100%;
     }

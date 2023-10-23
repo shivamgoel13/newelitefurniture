@@ -1,24 +1,24 @@
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    loop: true,
-    autoplay: true,
-    speed: 600,
-    breakpoints: {
-      576: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 10,
-      },
-      991: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-    },
-  });
+// var swiper = new Swiper(".mySwiper", {
+//     slidesPerView: 1,
+//     spaceBetween: 10,
+//     loop: true,
+//     autoplay: true,
+//     speed: 600,
+//     breakpoints: {
+//       576: {
+//         slidesPerView: 2,
+//         spaceBetween: 30,
+//       },
+//       768: {
+//         slidesPerView: 3,
+//         spaceBetween: 10,
+//       },
+//       991: {
+//         slidesPerView: 3,
+//         spaceBetween: 20,
+//       },
+//     },
+//   });
   function myHeader(){
     let header = document.getElementById("header");
     let lol = document.getElementById("lol");
@@ -41,10 +41,10 @@ function myBars(){
     bars.onclick = function(){
         if(nav.style.right == "0%"){
             nav.style.right = "-50%";
-            bars.src = "pic/menu.png"
+            bars.src = "/img/menu.png"
         }else{
             nav.style.right = "0%";
-            bars.src = "pic/x.png"
+            bars.src = "/img/x.png"
         }
         nav.classList.toggle("new")
     }
@@ -53,6 +53,29 @@ function myBars(){
 }
 myBars()
 
+    let swiper = new Swiper(".mySwiper", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoplay: true,
+        speed: 600,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        breakpoints: {
+                  576: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                  },
+                  768: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  991: {
+                    slidesPerView:1,
+                    spaceBetween: 20,
+                  }}
+    });
 function myFun(){
     let plus = document.querySelector(".plus");
     let textBox = document.querySelector(".text-box ");
